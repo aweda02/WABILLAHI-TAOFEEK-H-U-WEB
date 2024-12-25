@@ -3,6 +3,9 @@
  margin: 0;
  box-sizing: border-box;
 }
+body{
+  overflow-x: hidden;
+}
 .main{
 width: 100%;
 height: 100vh;
@@ -263,6 +266,15 @@ overflow: hidden;
 p{
     font-family: "DM Sans", serif;
 }
+.p-img{
+  background: #F8A543;
+  height: 40px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 2px;
+}
 
 .testimonial-2{
   width: 280px;
@@ -319,23 +331,21 @@ background: #1E1000;
     width: 20px;
     border-radius: 50%;
 }
-.carousel-control-prev,
-.carousel-control-next{
+.packages-prev-btn,
+.packages-next-btn{
 
   align-items: end;
   color: #F8A543;
 }
-.carousel-control-next{
+.packages-next-btn{
   margin-right: 100px;
 }
-.carousel-control-prev{
+.packages-prev-btn{
   margin-left: 120px;
 }
-.carousel-control-next-icon{
-    color: #F8A543;
-}
+
 @media (min-width:992px){
-   .carousel-item{
+   .pakages-carousel-item{
     display: flex;
     width: 33.33%;
     float: none;
@@ -343,17 +353,154 @@ background: #1E1000;
     transition: all 5ms;
     cursor: pointer;
   }
-  .carousel-item:hover{
+  .pakages-carousel-item:hover{
     transform: translateY(10px);
   }
   .carousel-indicators{
     display: none;
   }
-  .carousel-control-prev, .carousel-control-next{
+  .packages-prev-btn, .packages-next-btn{
     display: none;
   }
 }
 /* testimonial */
+.testimonial{
+  background: #FFFCF8;
+  width: 100%;
+  height: 100vh;
+  margin-bottom: 50px;
+  padding-bottom: 20px;
+
+}
+.carousel__button{
+  width: 172px;
+  height: 40px;
+  border: 3px solid; 
+  border-color: #F8A543;
+  border-radius: 8px;
+  color: #F8A543;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+    font-family: "DM Sans", serif;
+    cursor: pointer;
+    transition: all 0.5ms;
+}
+.carousel__button:hover{
+  background: #F8A543;
+  color: white;
+}
+
+
+.testimonial-card{
+  height: 410px;
+  width: 279px;
+  background: #F8A543;
+  border-radius: 20px;
+}
+.testimonial-card .testimonial-p1{
+font-size: 14px;
+  font-family: "DM Sans", serif;
+  line-height: 140%;
+  color: #454545;
+  margin-bottom: 70px;
+  margin-top: 30px;
+}
+.testimonial-card-1{
+  background: #1E1000;
+}
+  .testimonial-card .testimonial-p2{
+    font-size: 10px;
+  font-family: "DM Sans", serif;
+  color: #454545;
+  line-height: 140%;
+  }
+.testimonial-card > img{
+  margin-top: 10px;
+}
+    .testimonial-card .testimonial-p2 img{
+      border-radius: 50%;
+      margin-left: 70px;
+    }
+.testimonial-card h5{
+  font-size: 14px;
+  color: #1E1000;
+  line-height: 140%;
+  font-family: "DM Sans", serif;
+}
+@media (min-width:1400px){
+  .testimonial-card{
+    width: 373px;
+    height: 548px;
+      border-radius: 35px;
+        padding: 50px;
+  }
+    .testimonial-card h5{
+      font-size: 20px;
+    }
+  .testimonial-card .testimonial-p2{
+    font-size: 16px;
+  }
+  .testimonial-card .testimonial-p2 img{
+width: 70px;
+height: 70px;
+  }
+  .testimonial-card .testimonial-p1{
+    font-size: 20px;
+  }
+
+}
+@media(max-width:991px){
+  .testimonial-control{
+    display: none;
+  }
+}
+@media (min-width:992px){
+.testimonial-container-2{
+  float: left;
+  width: 40%;
+}
+.item-1 {
+  margin-top: 100px;
+}
+
+.item-3 {
+  margin-top: 60px;
+}
+.testimonial-container-2 {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.testimonial-control{
+  width: 141px;
+  height: 57px;
+  border-radius: 30px;
+  border: 2px solid;
+  border-color: #F8A543;
+  display: inline-block;
+  margin-left: 20px;
+  background: transparent;
+  transition: all 0.5ms;
+}
+.testimonial-control:hover{
+  background: #F8A543;
+  color: black;
+}
+
+.testimonial-slide{
+  float: left;
+  width: 60%;
+  margin-top: 30px;
+  padding-left: 50px;
+}
+}
+
+
 /* Gallery */
 #Gallery .img-1 img {
   width:100% ;
@@ -487,9 +634,7 @@ border-radius: 9px;
 border-top-left-radius: 16px;
 border-top-right-radius: 16px;
 height: 50%;
-position: absolute;
-z-index: -1;
-padding-top: 20px;
+padding-top: 10px;
 }
 .co-container{
   position: relative;
@@ -500,7 +645,6 @@ padding-top: 20px;
 .co-row{
   background:url(./images/Screenshot\ 2024-10-18\ 002654.png) center/cover no-repeat ;
 border-radius: 16px;
-    margin-top: 10px;
 }
 .co-btn{
   width: 149px;
