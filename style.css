@@ -279,30 +279,33 @@ font-size: 20px;
     width: 268px;
   }
 }
+.ab-row{
+  display: inline-block;
+}
 /* about animate */
 .container-2 {
   overflow: hidden;
+white-space: nowrap;
+
+}
+.container-2:hover .ab-row{
+  animation-play-state: paused;
 }
 
 .animate {
-  animation: animate 10s linear infinite;
+  animation: slide 10s linear infinite;
 }
-@keyframes animate {
-  0% {margin-right: 0px}
-5% {margin-right: 100px}
-10% {margin-right: 250px}
-20% {margin-right: 300px}
-30% {margin-right: 450px}
-40% {margin-left: -1500px}
-50% {margin-left: 100px}
-60% {margin-left: 250px}
-70% {margin-left: 350px}
-80% {margin-left: 450px}
-90% {margin-left: 550px}
-100% {margin-left: 1500px}
-0% {margin-left: 0px}
 
+
+@keyframes slide {
+  from{
+transform: translateX(0);
+  }
+to{
+transform: translateX(-100%);
 }
+}
+
 /* end of about page */
 /* packages */
 .testimonial-1 {
