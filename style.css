@@ -410,10 +410,15 @@ color: var(--primary-600);
 .testimonial-2 h1{
 color: var(--primary-600);
 }
-
+.card-border{
+  width: 80%;
+  height: 2px;
+  background: none;
+}
 
 .card-header {
   background: none;
+  border: none;
 }
 
 .card-body .btn {
