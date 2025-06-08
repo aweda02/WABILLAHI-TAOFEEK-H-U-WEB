@@ -80,7 +80,7 @@ Global Styles
  position: absolute;
  width: 100%;
  height: 100%;
- background: url(./blogs/blogherooverlay.png);
+ background: url(./blogs/blogherooverlay.png) center/cover no-repeat;
  top: 0;
  left: 0;
  display: flex;
@@ -148,6 +148,7 @@ input::placeholder{
 @media (max-width:800px){
   input{
     background: transparent;
+    width: 70%;
   }
   .search-container{
 margin-top: 10px;
@@ -171,6 +172,7 @@ padding: 5px 5px;
   }
   .article p {
     font-size: 12px;
+    text-align: center;
   }
   .br{
     display: none;
@@ -378,6 +380,27 @@ justify-content: space-evenly;
   font-family: var(--ff-junior);
   line-height: 27.9px;
 }
+.hidden-article h3{
+  color: var(--clr-text-btn);
+    font-family: "Grenda", serif;
+    padding-bottom: 10px;
+    font-size: 20.94px;
+    font-weight: bold;
+    text-align: justify;
+    letter-spacing: -3%;
+    font-family: var(--ff-junior);
+    line-height: 27.9px;
+  }
+.hidden-article p{
+  font-size: 12.22px;
+    color: black;
+    opacity: 70%;
+    padding-bottom: 15px;
+    font-family: var(--ff-junior);
+    line-height: 20.9px;
+    text-align: justify;
+    letter-spacing: -2%;
+}
 .content-article p{
 font-size: 12.22px;
 color: black;
@@ -434,16 +457,50 @@ padding: 30px 0px;
   }
   .content-article h2 {
 line-height: 140%;
-word-break: break-all;
 font-size: 18px;
   }
   .content-article p {
 font-size: 14px;
   }
+  .hidden-article h3{
+    line-height: 140%;
+      font-size: 18px;
+  }
+  .hidden-article p{
+      font-size: 14px;
+  }
   .content-article .blog-date {
 font-size: 12.22px;
   }
 }
+@media(max-width:576px){
+  .br-none{
+    display: none;
+  }
+}
+.hidden-article{
+  overflow-y: hidden;
+  display: none;
+}
+
+.active-text{
+display: contents;
+overflow: visible;
+}
+.more-none{
+  display: none;
+}
+
+
+@media (min-width:800px){
+  .active{
+    grid-column: span 3;
+  }
+  .active-img{
+  height: 500px;
+}
+}
+
 
 /*
 =========
