@@ -8,18 +8,10 @@ toggleBtn.addEventListener('click',function(){
 
 // Fixed navigation bar functionality
 window.addEventListener('scroll', () => {
- var headerSize = Header.getBoundingClientRect().height;
  var scrollPos = window.pageYOffset;
- if (scrollPos > headerSize) {
-   Header.classList.add('fixed');
-   Header.classList.remove('show-wrapper');
- }
 if(scrollPos > 80){
  Header.classList.remove('show-wrapper');
 }
-  else {
-   Header.classList.remove('fixed');
- }
 });
 
 // end of toggle btn

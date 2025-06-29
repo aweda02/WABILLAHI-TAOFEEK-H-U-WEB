@@ -284,14 +284,16 @@ background: transparent;
 .content-img img {
  width: 100%;
  height: 100%;
- border-top-left-radius: 10px;
- border-top-right-radius: 10px;
+border-radius: 24px;
  object-fit: fill;
+ filter: brightness(110%);
+ filter: contrast(110%)
 }
 
+
 .content-article {
- width: 90%;
- text-align: justify;
+ width: 100%;
+ text-align: left;
  padding: 10px 30px 15px 15px;
 }
 
@@ -301,7 +303,7 @@ background: transparent;
  padding-bottom: 10px;
  font-size: 20.94px;
  font-weight: bold;
- text-align: justify;
+ text-align: left;
  letter-spacing: -3%;
  font-family: var(--ff-junior);
  line-height: 27.9px;
@@ -312,7 +314,7 @@ background: transparent;
 letter-spacing: 1%;
 line-height: 40px;
 color: var(--clr-text-btn);
-text-align: justify;
+text-align: left;
 font-weight: 400;
 }
 .article{
@@ -329,6 +331,12 @@ font-weight: 400;
  line-height: 20.9px;
  text-align: justify;
  letter-spacing: -2%;
+}
+.content-article h1{
+  display: none;
+}
+.blog-date-none{
+  display: none;
 }
 
 .active-content-article ul {
@@ -347,7 +355,7 @@ font-weight: 400;
  letter-spacing: -2%;
 }
 
-.content-article .blog-date {
+  .blog-date {
  text-align: justify;
  color: var(--clr-btn-bg);
  font-weight: 300;
@@ -357,10 +365,11 @@ font-weight: 400;
  font-size: 10.47px;
  line-height: 15.7px;
 }
-.content-article .admin-date{
+  .admin-date{
  color: var(--clr-overlay-1);
  margin-top: 10px;
   margin-bottom: 30px;
+ 
 }
 .admin{
  color: var(--clr-btn-bg);
@@ -377,6 +386,17 @@ font-weight: 400;
 @media (min-width:800px) {
  .blog-article {
   grid-template-columns: repeat(3, 1fr);
+ }
+
+ .content-article h1 {
+   display: block;
+ }
+
+ .blog-date-none {
+   display: block;
+ }
+ .header-none{
+  display: none;
  }
 
  .content-img {
@@ -447,6 +467,9 @@ padding: 10px;
    margin-left: 20px; }
    .share-article-container h4{
     font-size: 20px;
+   }
+   .active-article{
+    width: 95%;
    }
 }
 /*
@@ -530,7 +553,11 @@ footer
 .footer-span {
  margin-left: 35px;
 }
-
+@media (max-width:576px) {
+  .footer-copyright p {
+    font-size: 12px;
+  }
+}
 @media(min-width:1024px) {
  .footer-row {
   flex-direction: row;
